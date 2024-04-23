@@ -92,7 +92,7 @@ export function MetaMaskAccount(ethereum) {
      * @returns { Promise<string> } signature in hex format
      */
     async ethereumSign(bytes, ethAddr) {
-      let data = `0x${Buffer.from([...bytes], 'utf8').toString('hex')}`;`;
+      let data = `0x${Buffer.from([...bytes], 'utf8').toString('hex')}`;
       const sig = await ethereum.request({
         method: 'personal_sign',
         params: [data, ethAddr],
